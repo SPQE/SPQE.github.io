@@ -1,0 +1,846 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAYcAA0AAAAACjQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABMAAAABwAAAAca8vGTk9TLzIAAAFMAAAARAAAAFZG1VHVY21hcAAAAZAAAAA+AAABQgAP9AdjdnQgAAAB0AAAAAQAAAAEACICiGdhc3AAAAHUAAAACAAAAAj//wADZ2x5ZgAAAdwAAADRAAABEKyikaNoZWFkAAACsAAAAC0AAAA2AtXoA2hoZWEAAALgAAAAHAAAACQHngNFaG10eAAAAvwAAAAQAAAAEAwAACJsb2NhAAADDAAAAAoAAAAKALIAVG1heHAAAAMYAAAAHwAAACABEAB2bmFtZQAAAzgAAALBAAAFu3I9x/Nwb3N0AAAF/AAAAB0AAAAvaoFvbwAAAAEAAAAAzBdyYwAAAADP2IQvAAAAAM/bz7t4nGNgZGFgnMDAysDB1Ml0hoGBoR9CM75mMGLkYGBgYmBlZsAKAtJcUxgcPsR8iGF2+O/AEMPsznAYKMwIkgMA5REMOXicY2BgYGaAYBkGRgYQsAHyGMF8FgYFIM0ChED+h5j//yEk/3KoSgZGNgYYk4GRCUgwMaACRoZhDwCs7QgGAAAAIgKIAAAAAf//AAJ4nHWMMQrCQBBF/0zWrCCIKUQsTDCL2EXMohYGSSmorScInsRGL2DOYJe0Ntp7BK+gJ1BxF1stZvjz/v8DRghQzEc4kIgKwiAppcA9LtzKLSkdNhKFY3HF4lK69ExKslx7Xa+vPRVS43G98vG1DnkDMIBUgFN0MDXflU8tbaZOUkXUH0+U27RoRpOIyCKjbMCVejwypzJJG4jIwb43rfl6wbwanocrJm9XFYfskuVC5K/TPyczNU7b84CXcbxks1Un6H6tLH9vf2LRnn8Ax7A5WQAAAHicY2BkYGAA4teL1+yI57f5ysDNwgAC529f0kOmWRiYVgEpDgYmEA8AUzEKsQAAAHicY2BkYGB2+O/AEMPCAAJAkpEBFbAAADgKAe0EAAAiAAAAAAQAAAAEAAAAAAAAKgAqACoAiAAAeJxjYGRgYGBhsGFgYgABEMkFhAwM/xn0QAIAD6YBhwB4nI1Ty07cMBS9QwKlQapQW3VXySvEqDCZGbGaHULiIQ1FKgjWMxknMfLEke2A+IJu+wntrt/QbVf9gG75jK577Lg8K1qQPCfnnnt8fX1NRC/pmjrk/zprC+8D7tBy9DHgBXoWfQ44Av8t4Bj4Z8CLtBL9CniJluPXASf0Lm4CXqFX8Q84dOLnMB17N4c7tBo1AS/Qi+hTwBH4rwHHwN8DXqQ30XXAS7QaLwSc0Gn8NuAVWou/gFmnjLrEaEh9GmDdDGgL3B4JsrRPDU2hTOiMSuJUIdKQQayiAth69r6akSSFqIJuA19TrzCIaY8sIoxyrNIrL//pw7A2iMygkX5vDj+G+kuoLdX4GlGK/8Lnlz6/h9MpmoO9rafrz7ILXEHHaAx95s9lsI7AHNMBWEZHULnfAXwG9/ZqdzLI08iuwRloXE8kfhXYAvE23+23DU3t626rbs8/8adv+9DWknsHp3E17oCf+Z48rvEQNZ78paYM38qfk3v/u3l3u3GXN2Dmvmvpf1Srwk3pB/VSsp512bA/GG5i2WJ7wu430yQ5K3nFGiOqgtmSB5pJVSizwaacmUZzZhXLlZTq8qGGFY2YcSkqbth6aW1tRmlaCFs2016m5qn36SbJrqosG4uMV4aP2PHBmB3tjtmgN2izkGQyLWprekbIntJFing32a5rKWCN/SdSoga45EJykyQ7asZvHQ8PTm6cslIpwyeyjbVltNikc2HTR7YKh9LBl9DADC0U/jLcBZDKrMhUBfQBvXRzLtFtjU9eNHKin0x5InTqb8lNpfKv1s1xHzTXRqgKzek/mb7nB8RZTCDhGEX3kK/8Q75AmUM/eLkfA+0Hi908Kx4eNsMgudg5GLdRD7a84npi+YxNr5i5KIbW5izXas7cHXIMAau1OueZhfj+cOcP3P8MNIWLyYOBuxL6DRylJ4cAAAB4nGNgYoAALjDJyIAOWMCiTIxMLDmZedkABtIBygAAAA==) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title># Dosier de la candidatura #SPQE</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-dosier-de-la-candidatura-spqe" class="anchor" href="#dosier-de-la-candidatura-spqe" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dosier de la candidatura #SPQE</h1>
+
+<h2>
+<a id="user-content-candidatos" class="anchor" href="#candidatos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Candidatos</h2>
+
+<ul>
+<li>Presidente: Amparo Ramada Monzón</li>
+<li>Vicepresidente: Pau Tomas Riutort Gelabert</li>
+<li>Vicepresidente Deportivo: Francisco González García</li>
+<li>Secretario: Iria Collazo García</li>
+<li>Tesorero: Ignacio Huesa Cerdán</li>
+<li>Vocal 1: María del Carmen González García</li>
+<li>Vocal 2: Sergio Catalán Gálvez</li>
+<li>Vocal 3: Diego miguel Peñalver Hernández</li>
+<li>Departamento Legas e institucional: Clara Luján Fernández Rodríguez</li>
+</ul>
+
+<h3>
+<a id="user-content-avance-en-departamento-legal-y-reglamentos-de-la-iqa" class="anchor" href="#avance-en-departamento-legal-y-reglamentos-de-la-iqa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Avance en departamento legal y reglamentos de la IQA</h3>
+
+<ul>
+<li><p>Reconocimiento en la modalidad de deporte
+Uno de los puntos importantes a la hora de avanzar es que este deporte sea reconocido como tal.
+Particularmente en cada región hay una legislación respecto a ello. Nuestro trabajo no solo será de estar al tanto de cada una de esas legislaciones, sino de entablar el contacto con el CSD (Consejo Superior de Deportes) con el fin de llegar al punto de ser reconocidos.</p></li>
+<li>
+<p>Funciones principales.
+Realizar reuniones mensuales de Junta Directiva y de Asamblea, con ello se conseguirá:</p>
+
+<ol>
+<li>Conocimiento del avance de los equipos.</li>
+<li>Poner al día el avance de las propuestas dadas en este documento.</li>
+<li>Mayor transparencia para con la Asamblea.</li>
+<li>Mejor toma de decisiones.</li>
+</ol>
+</li>
+<li><p>Reuniones trimestrales con Departamentos
+Hace poco que la AQE tiene departamentos pero el contacto o la existencia de ellos es desconocida a la vista de muchos jugadores, con la ayuda de vocales y una carpeta de direcciones podremos tener a mano de cualquier usuario de la asociación los diferentes departamentos, así como estar al día de su avance en las reuniones.</p></li>
+<li><p>Protección de datos
+En el momento en el que la AQE tenga todo legalizado, se iniciará el proceso de tener  una ley de protección de datos, con el fin de que los jugadores estén seguros de la utilización de ellos, y estén más reglados.</p></li>
+<li>
+<p>Reglamento de régimen interno
+Un punto que se comenzó a realizar en la vigente Junta en funciones, pero no se llevó a cabo en su totalidad, a falta de su aprobación se repasará el reglamento ya puesto en la actual para añadir o quitar reglamentos acordes con las necesidades de los jugadores.</p>
+
+<ol>
+<li>Cuotas: En este reglamento también estipularemos la cuota anual por equipos y por jugadores acordes al tiempo de los equipos, no es lo mismo un equipo en desarrollo que un equipo con 2 años o 1 año de antigüedad. De esta manera haremos que no les cueste tanto dinero los torneos a los equipos y se puedan minimizar gastos futuros.</li>
+</ol>
+</li>
+<li><p>Apertura de cuenta bancaria
+La cuenta bancaria es necesaria para la efectuación de pagos para torneos a nivel nacional, de esta manera se podrán llevar las cuentas con mayor claridad y transparencia, para ello requeriremos del CIF del cual se está a la espera.</p></li>
+<li><p>Adaptación del reglamento a menores
+En contadas ocasiones los componentes de los equipos reciben a niños que quieren jugar este deporte pero que no pueden de forma oficial hasta alcanzar los 16 años, por ello queremos implantar un reglamento para ellos. Es la manera más fácil para que se vayan acostumbrando, no sólo a competir, sino, a saber defenderse en el campo para el día de mañana.
+Una de las maneras más fáciles es crear escuela, que con la aceptación de deporte será algo mucho más fácil para llevarlo de forma correcta.</p></li>
+<li>
+<p>IQA
+La relación de la AQE con la IQA ya es algo más directa y sencilla, pero queremos presentar un proyecto que nos facilite tanto nuestro trabajo como el de ellos.</p>
+
+<ol>
+<li> Pedir que el examen arbitral se encuentre en nuestro idioma natal.</li>
+<li>A nivel nacional tener traducidos los nuevos reglamentos, así como las actas de las reuniones para que todos jugadores y/o capitanes estén al día de lo que pasa fuera de España y hacia dónde se encamina el proyecto a nivel Mundial.</li>
+</ol>
+</li>
+<li>
+<p>Ayudas</p>
+
+<ol>
+<li>El departamento legal y relaciones institucionales al igual que la Junta, elaborarán un dossier por comunidad para tener a las comunidades y a sus representantes al día de las ayudas, del papeleo oportuno para realizar diferentes tipos de asociaciones, actividades de su zona y la financiación que pueda llegar a otorgar sus municipios.</li>
+<li>En el caso de que se le conceda alguna ayuda de carácter nacional a la AQE esta se emplearía a un mejor desarrollo de su selección, como también a diferentes torneos a nivel nacional, de esta manera ayudaremos a los jugadores a no encarecer su gasto en torneos y compromisos con la selección.</li>
+<li>Otra novedad que se instaura en el departamento es un dossier de instalaciones deportivas por comunidad que contendrá los precios de cada zona, este dossier se hará poco a poco con la ayuda de cada equipo de la comunidad, para poder tener un posible contacto para copas de carácter Nacional y en un posible futuro de forma Internacional. En él podremos encontrar no solo los diferentes precios sino que también sus instalaciones.</li>
+</ol>
+</li>
+<li><p>Departamento de igualdad</p></li>
+</ul>
+
+<ol>
+<li><p>Género fluido y tránsgenero
+Este departamento está creado para ayudar a todo aquel que lo necesite. Es un tema a tratar del cual la sociedad no tiene en cuenta pero que en este deporte está a la orden del día. Queremos que el departamento lo lleve una persona dotada para ello, ya que ante todo la prioridad es la comodidad del jugador, creando así un buen ambiente para él o ella.</p></li>
+<li><p>Ministerio de Igualdad
+Este ministerio da un empuje a todas esas minorías de las cuales no se tratan de forma corriente. Nos puede ayudar a cómo podemos implantar en este deporte en la sociedad, es un deporte mixto donde la mujer y el hombre compiten en igualdad, cosa que hasta la fecha no es muy común. El ponerse en contacto con ellos nos puede ayudar mucho a tratar casos de discriminación o como tratar a los jóvenes, ya que es un deporte con personas de edad más próxima a la etapa de la adolescencia que a la madurez, y ellos nos pueden ayudar a cómo poder ayudar a nuestros compañeros en diversos problemas que nos podamos llegar a encontrar.</p></li>
+<li><p>Asociaciones LGTBI
+Este tipo de asociaciones ocupan hoy el día una buena imagen en la sociedad, en un deporte como este donde no da a lugar la discriminación de género o sexo, tiene que estar a la orden del día con ellos. No solo nos pueden ayudar ya que tu identidad sexual no importa porque es tratada como tal, algo normal que es lo que es. Con su ayuda pueden hacer de este deporte más visible y darnos más credibilidad de cara al ciudadano a pie que no conozca este deporte.
+Integraremos a estas asociaciones en el proyecto con un fin común, un deporte mixto, con una sexualidad sana y segura, donde los insultos homofóbicos estén penalizados y el comportamiento fóbico a las personas sean del sexo que sean se acaben. Hagamos que este deporte sea sano y seguro.</p></li>
+</ol>
+
+<ul>
+<li><p>Establecimiento de cuota anual
+Esta cuota ayudará a cubrir gastos de eventos, material o una parte de la selección española.
+La cuota será aprobada por asamblea y se pagará en concepto de nivel de equipo, el cual la junta y la asamblea predeterminará el nivel del equipo para el mes que deba efectuar su pago anual.
+Patrocinio
+Los diferentes componentes de la Junta se encargarán de realizar una carta de presentación a diferentes marcas con el fin de patrocinio. El patrocinio también nos podrá ayudar a subvencionar el deporte o dar visibilidad. Priorizando siempre los conceptos impuestos del patrocinio, una vez que la marca nos de esos puntos se pasarán a Asamblea para dar el visto bueno.</p></li>
+<li><p>Unión con otros países
+Como bien sabemos este deporte ya está llegando a todas partes del mundo, al igual que al rincón de Sud América, el cual tienen nuestra misma lengua, estaría bien estar al día con ellos y hacer fuerza para que tanto en sus países como en el nuestro hacer de este deporte algo más grande, ver su punto de vista y ellos el nuestro podría darnos facilidades para poder avanzar de forma conjunta.</p></li>
+</ul>
+
+<h3>
+<a id="user-content-desarrollo-web-y-redes-sociales" class="anchor" href="#desarrollo-web-y-redes-sociales" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Desarrollo Web y redes sociales</h3>
+
+<ul>
+<li>
+<p>Creación de una Página Web
+Tras varios años con redes sociales para que las personas de diferentes puntos de España y del mundo nos puedan conocer llegó el momento de realizar una página web en condiciones.
+En ella podrán conocer el Quidditch Español más a fondo al igual que a  sus equipos. Una página web que haga al usuario más fácil en ponerse en contacto con nosotros para poder jugar a este deporte.
+Otra de las claves que queremos tener en la página web son dos tipos de dossiers:</p>
+
+<ol>
+<li>PDF arbitral:
+Su fin sería preparar a los componentes de los equipos que se quieran presentar al examen arbitral, de esta manera tendríamos un enfoque más didáctico y cercano, ya que podrían realizar sus cuestiones en el foro de la Web.</li>
+<li>Ayuda para principiantes:
+Es importante amparar a los equipos entrantes, en este documento se pondrían varios presupuestos desde los diferentes puntos de España, al igual que los diferentes productos que utilizan.</li>
+<li>Nutrición:
+Si bien es sabido esto es un deporte bastante nuevo, y tenemos que empezar a ser conscientes de cómo podemos gestionar la energía en cada partido, para ello crearemos uno o dos post mensuales en la página web, llevados por dos nutricionistas donde nos darán tips para poder aprender más de cómo alimentarnos de forma deportiva, ya sea diariamente, para el entrenamiento o para un torneo a gran escala como puede ser un Nacional.</li>
+</ol>
+</li>
+<li><p>Redes sociales
+La creación de este departamento dará mayor visualización del Quidditch a través de las redes, no solo para los usuarios nuevos que quieran ponerse en contacto con nosotros, sino también para el usuario ya perteneciente a ello.
+Los resultados de los torneos amistosos/oficiales, partidos y ligas. Estos resultados se realizarán en directo.
+Por eso el departamento será llevado por varias personas para poder tener un mayor rango de trabajo y estar al día de todo.</p></li>
+<li><p>YouTube
+Plataforma poco utilizada hasta ahora pero de la cual se puede sacar mucha rentabilidad.
+En ella se subirían tutoriales de entrenamientos físicos, entrenamientos para Snitch, partidos, entrevistas, tutoriales de enseñanza arbitral y realización del material (aros, bases, escobas) así como consejos.
+Desde esta plataforma podemos hacer más fácil el aprendizaje de los equipos.</p></li>
+</ul>
+</article></body></html>
